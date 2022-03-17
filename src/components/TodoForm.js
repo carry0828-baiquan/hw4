@@ -13,14 +13,17 @@ function FormTodo({ addTodo }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}> 
+    <Form onSubmit={handleSubmit} >
     <Form.Group>
       <Form.Label><b style={{color:"white"}}>Add Todo</b></Form.Label>
       <Form.Control style={{backgroundColor:"black", color:"white"}} type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
     </Form.Group>
-    <Button variant="primary mb-2" type="submit" style={{marginTop:"16px"}}>
-      Submit
-    </Button>
+      <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+        <Button variant="primary mb-2" type="submit" style={{marginTop:"16px"}}>
+          Add
+        </Button>
+      </div>
+
   </Form>
   );
 }

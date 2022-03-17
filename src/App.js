@@ -34,14 +34,14 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <h1 className="text-center mb-4" style={{ color: "white" }}>
+        <h1 className="text-center mb-4" style={{ color: "deepskyblue" }}>
           Reminder
         </h1>
         <FormTodo addTodo={addTodo} />
         <div>
           {todos.map((todo, index) => (
-            <Card>
-              <Card.Body style={{ backgroundColor: "black" }}>
+            <Card className="card" style={{marginTop:"10px", marginBottom:"10px"}}>
+              <Card.Body style={{ backgroundColor: "black"}}>
                 <Todo
                   key={index}
                   index={index}
@@ -49,6 +49,7 @@ function App() {
                   markTodo={markTodo}
                   removeTodo={removeTodo}
                 />
+                <span> </span>
               </Card.Body>
             </Card>
           ))}
